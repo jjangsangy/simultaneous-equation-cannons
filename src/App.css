@@ -191,6 +191,32 @@ button.selected {
     text-align: left; /* Align error message to the left */
 }
 
+/* Error Message Container */
+.error-message-container {
+    min-height: 20px; /* Reserve space for the error message */
+    margin-top: 10px; /* Space between the section and the error message */
+    display: flex;
+    align-items: center; /* Center the error message vertically if it appears */
+    justify-content: flex-start; /* Align message text to the left */
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #ff6f61;
+    font-size: 14px;
+    font-weight: bold;
+    animation: fadeOut 3s forwards; /* Optional fade-out effect */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /* Extra Deck Count Styling */
 .deck-count p {
     margin-top: 10px;

@@ -38,30 +38,39 @@ function App() {
         }
     };
 
+    const showErrorMessage = (message) => {
+        setErrorMessage(message);
+
+        // Clear the error message after 3 seconds
+        setTimeout(() => {
+            setErrorMessage("");
+        }, 3000);
+    };
+
     const handleFusionLevelToggle = (level) => {
         if (selectedFusionLevels.includes(level)) {
+            // Deselect the level
             setSelectedFusionLevels((prev) => prev.filter((l) => l !== level));
-            setErrorMessage("");
         } else {
             if (calculateExtraDeckCount() < MAX_EXTRA_DECK_SIZE) {
+                // Add the level
                 setSelectedFusionLevels((prev) => [...prev, level]);
-                setErrorMessage("");
             } else {
-                setErrorMessage("Extra Deck limit exceeded! Maximum 15 cards allowed.");
+                showErrorMessage("Extra Deck limit exceeded! Maximum 15 cards allowed.");
             }
         }
     };
 
     const handleXyzRankToggle = (rank) => {
         if (selectedXyzRanks.includes(rank)) {
+            // Deselect the rank
             setSelectedXyzRanks((prev) => prev.filter((r) => r !== rank));
-            setErrorMessage("");
         } else {
             if (calculateExtraDeckCount() + 2 <= MAX_EXTRA_DECK_SIZE) {
+                // Add the rank
                 setSelectedXyzRanks((prev) => [...prev, rank]);
-                setErrorMessage("");
             } else {
-                setErrorMessage("Extra Deck limit exceeded! Maximum 15 cards allowed.");
+                showErrorMessage("Extra Deck limit exceeded! Maximum 15 cards allowed.");
             }
         }
     };
@@ -132,9 +141,12 @@ function App() {
                             <strong>Total Cards in Extra Deck:</strong> {calculateExtraDeckCount()} / 15
                         </p>
                     </div>
+
+                    <div className="error-message-container">
+                        {errorMessage && <p className="error-message">{errorMessage}</p>}
+                    </div>
                 </div>
             </div>
-
             <h2 className="section-title">Board State</h2>
             <div className="input-section">
                 <div className="input-group">
@@ -193,7 +205,6 @@ function App() {
                 )}
             </div>
         </div>
-
     );
 }
 
