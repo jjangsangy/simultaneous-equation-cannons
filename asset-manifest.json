@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/simultaneous-equation-cannons/static/css/main.47541b3a.css",
+    "main.js": "/simultaneous-equation-cannons/static/js/main.b06d9c33.js",
+    "index.html": "/simultaneous-equation-cannons/index.html",
+    "main.47541b3a.css.map": "/simultaneous-equation-cannons/static/css/main.47541b3a.css.map",
+    "main.b06d9c33.js.map": "/simultaneous-equation-cannons/static/js/main.b06d9c33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.47541b3a.css",
+    "static/js/main.b06d9c33.js"
+  ]
+}
