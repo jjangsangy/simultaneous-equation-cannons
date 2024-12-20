@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #282c34;
@@ -11,22 +12,29 @@ body {
     text-align: center;
 }
 
+/* Title Styling */
 .title {
     margin-bottom: 20px;
 }
-
+/* Input Section Styling */
 .input-section {
     margin-bottom: 20px;
+    display: flex; /* Use Flexbox for horizontal alignment */
+    gap: 20px; /* Add spacing between the input groups */
+    justify-content: center; /* Center inputs horizontally */
+    align-items: center; /* Align inputs vertically */
 }
 
 .input-group {
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Keep label and input stacked */
+    align-items: center; /* Center-align label and input */
 }
 
 .input-group label {
-    display: block;
     margin-bottom: 5px;
     font-size: 16px;
+    text-align: center;
 }
 
 input {
@@ -34,13 +42,22 @@ input {
     font-size: 16px;
     border-radius: 4px;
     border: none;
+    width: 150px; /* Ensure consistent input width */
+    text-align: center;
 }
 
+/* Selection Section Styling */
 .selection-section {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align content */
+    gap: 20px; /* Space between sections */
     margin-bottom: 20px;
+}
+
+.selection-group {
+    width: 100%; /* Consistent alignment */
+    text-align: center;
 }
 
 .selection-group h3 {
@@ -56,10 +73,13 @@ input {
 
 button {
     padding: 10px;
+    width: 50px; /* Fixed width for consistency */
+    height: 50px; /* Fixed height for consistency */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
     background-color: #3b3f46;
     color: white;
     transition: background-color 0.2s ease;
@@ -73,35 +93,46 @@ button.selected {
     background-color: #61dafb;
     color: black;
 }
-
+/* Result Section Styling */
 .result-section {
     margin-top: 20px;
-    text-align: center;
-}
-
-.result {
-    background-color: #3b3f46;
-    padding: 20px;
+    min-height: 150px; /* Reserve space for results */
+    position: relative; /* Ensures static position in layout */
+    border: 2px solid #50555e; /* Optional: visually distinguish results area */
+    padding: 10px;
     border-radius: 10px;
-    display: inline-block;
+    background-color: #3b3f46;
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center; /* Centers all text */
 }
 
-.no-result {
+.result-section .result {
+    text-align: center; /* Ensures result text is also centered */
+}
+
+.result-section .no-result,
+.result-section .no-selection {
     color: #ff6f61;
+    font-weight: bold;
 }
 
+.result-section .no-selection {
+    color: #ffc107;
+}
+
+/* Error Message Styling */
 .error-message p {
     color: #ff6f61;
     font-weight: bold;
+    margin-top: 20px;
 }
 
+/* Extra Deck Count Styling */
 .deck-count p {
     margin-top: 10px;
     font-size: 16px;
-}
-
-.no-selection {
-    color: #ffc107; /* Yellow to grab attention */
-    font-weight: bold;
-    margin-top: 20px;
 }

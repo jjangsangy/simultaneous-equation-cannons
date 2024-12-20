@@ -93,14 +93,16 @@ function App() {
     return (
         <div className="app">
             <h1 className="title">Simultaneous Equation Cannons</h1>
-
             <div className="input-section">
                 <div className="input-group">
                     <label>Total Cards (in both hands and on the field):</label>
                     <input
                         type="number"
                         value={totalCards}
-                        onChange={(e) => setTotalCards(Number(e.target.value))}
+                        onChange={(e) => {
+                            const value = Math.max(0, Number(e.target.value)); // Prevent negative numbers
+                            setTotalCards(value);
+                        }}
                     />
                 </div>
 
@@ -109,7 +111,10 @@ function App() {
                     <input
                         type="number"
                         value={opponentMonsterRankOrLevel}
-                        onChange={(e) => setOpponentMonsterRankOrLevel(Number(e.target.value))}
+                        onChange={(e) => {
+                            const value = Math.max(0, Number(e.target.value)); // Prevent negative numbers
+                            setOpponentMonsterRankOrLevel(value);
+                        }}
                     />
                 </div>
             </div>
@@ -145,7 +150,6 @@ function App() {
                     </div>
                 </div>
             </div>
-
             <div className="result-section">
                 {calculationResult ? (
                     <div className="result">
@@ -169,7 +173,7 @@ function App() {
                     {MAX_EXTRA_DECK_SIZE}
                 </p>
             </div>
-        </div>
+        </div >
     );
 }
 
