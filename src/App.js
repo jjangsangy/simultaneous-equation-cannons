@@ -93,30 +93,6 @@ function App() {
     return (
         <div className="app">
             <h1 className="title">Simultaneous Equation Cannons</h1>
-            <div className="input-section">
-                <div className="input-group">
-                    <label>Total Cards (in both hands and on the field):</label>
-                    <input
-                        type="number"
-                        value={totalCards}
-                        onChange={(e) => {
-                            const value = Math.max(0, Number(e.target.value)); // Prevent negative numbers
-                            setTotalCards(value);
-                        }}
-                    />
-                </div>
-                <div className="input-group">
-                    <label>Opponent Monster Rank/Level:</label>
-                    <input
-                        type="number"
-                        value={opponentMonsterRankOrLevel}
-                        onChange={(e) => {
-                            const value = Math.min(12, Math.max(0, Number(e.target.value))); // Clamp value between 0 and 12
-                            setOpponentMonsterRankOrLevel(value);
-                        }}
-                    />
-                </div>
-            </div>
 
             <div className="selection-section">
                 <div className="selection-group">
@@ -149,6 +125,49 @@ function App() {
                     </div>
                 </div>
             </div>
+
+            <div className="input-section">
+                <div className="input-group">
+                    <label>Total Cards:</label>
+                    <input
+                        type="number"
+                        value={totalCards}
+                        onChange={(e) => {
+                            const value = Math.max(0, Number(e.target.value));
+                            setTotalCards(value);
+                        }}
+                    />
+                    <div className="button-group">
+                        <button onClick={() => setTotalCards((prev) => Math.max(0, prev - 1))}>-</button>
+                        <button onClick={() => setTotalCards((prev) => prev + 1)}>+</button>
+                    </div>
+                </div>
+
+                <div className="input-group">
+                    <label>Opponent Monster Rank/Level:</label>
+                    <input
+                        type="number"
+                        value={opponentMonsterRankOrLevel}
+                        onChange={(e) => {
+                            const value = Math.min(12, Math.max(0, Number(e.target.value)));
+                            setOpponentMonsterRankOrLevel(value);
+                        }}
+                    />
+                    <div className="button-group">
+                        <button
+                            onClick={() => setOpponentMonsterRankOrLevel((prev) => Math.max(0, prev - 1))}
+                        >
+                            -
+                        </button>
+                        <button
+                            onClick={() => setOpponentMonsterRankOrLevel((prev) => Math.min(12, prev + 1))}
+                        >
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <div className="result-section">
                 {calculationResult ? (
                     <div className="result">

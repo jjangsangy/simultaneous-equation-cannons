@@ -20,32 +20,68 @@ body {
 
 /* Input Section Styling */
 .input-section {
-    margin-bottom: 20px;
-    display: flex; /* Flexbox for horizontal alignment */
+    margin-top: 20px;
+    display: flex; /* Align input groups horizontally */
     gap: 20px; /* Add spacing between input groups */
-    justify-content: space-between; /* Spread inputs across available space */
-    align-items: center; /* Vertically center-align the inputs */
+    padding: 20px; /* Padding inside the section for consistent spacing */
+    border: 2px solid #50555e; /* Outline the grouping */
+    border-radius: 8px; /* Rounded corners for consistency */
+    background-color: transparent; /* Keep the original background */
+    justify-content: space-between; /* Distribute input groups horizontally */
+    align-items: flex-start; /* Align input groups at the top */
 }
 
 .input-group {
-    flex: 1; /* Make input groups fill available space equally */
+    flex: 1; /* Allow input groups to share available space equally */
     display: flex;
     flex-direction: column; /* Keep label and input stacked */
     align-items: flex-start; /* Align label and input to the left */
+    min-width: 0; /* Prevent overflow issues */
 }
 
 .input-group label {
     margin-bottom: 5px;
     font-size: 16px;
+    line-height: 1.5; /* Ensure consistent line spacing */
+    height: 24px; /* Fix label height to align sections */
+    display: flex; /* Align text properly even if wrapping */
+    align-items: center; /* Center-align text vertically */
 }
 
 input {
     padding: 10px;
     font-size: 16px;
     border-radius: 4px;
+    border: 1px solid #50555e; /* Add a light border for better contrast */
+    width: 100%; /* Ensure input fills available space */
+    box-sizing: border-box; /* Include padding and border in width */
+    text-align: left; /* Align text within the input to the left */
+}
+
+/* Button Group Styling */
+.button-group {
+    margin-top: 10px; /* Space between input field and buttons */
+    display: flex;
+    gap: 5px; /* Space between the buttons */
+    width: 100%; /* Make the button group span the full width */
+}
+
+.button-group button {
+    flex: 1; /* Make each button take an equal share of the width */
+    padding: 10px; /* Ensure consistent button size */
+    font-size: 16px;
     border: none;
-    width: 100%; /* Make input fill available space */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    border-radius: 4px;
+    background-color: #50555e;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+}
+
+.button-group button:hover {
+    background-color: #61dafb;
+    color: black;
 }
 
 /* Selection Section Styling */
