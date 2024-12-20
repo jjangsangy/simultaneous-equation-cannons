@@ -145,8 +145,20 @@ function App() {
                     <div className="error-message-container">
                         {errorMessage && <p className="error-message">{errorMessage}</p>}
                     </div>
+
+                    <button
+                        className="clear-button"
+                        onClick={() => {
+                            setSelectedFusionLevels([]);
+                            setSelectedXyzRanks([]);
+                            setErrorMessage(""); // Clear any existing error message
+                        }}
+                    >
+                        Clear Selections
+                    </button>
                 </div>
             </div>
+
             <h2 className="section-title">Board State</h2>
             <div className="input-section">
                 <div className="input-group">
