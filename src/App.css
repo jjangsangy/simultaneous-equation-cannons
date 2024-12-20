@@ -18,6 +18,15 @@ body {
     text-align: left; /* Align title to the left */
 }
 
+/* Section Title Styling */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below the title */
+    text-align: left; /* Align titles to the left */
+    color: #ffffff;
+}
+
 /* Input Section Styling */
 .input-section {
     margin-top: 20px;
@@ -83,31 +92,41 @@ input {
     background-color: #61dafb;
     color: black;
 }
-
 /* Selection Section Styling */
 .selection-section {
-    display: flex;
-    flex-direction: column; /* Stack sections vertically */
-    align-items: flex-start; /* Align content to the left */
-    gap: 20px; /* Space between sections */
     margin-bottom: 20px;
 }
 
+.selection-group-box {
+    padding: 20px; /* Add padding inside the grouping box */
+    border: 2px solid #50555e; /* Outline the grouping box */
+    border-radius: 8px; /* Rounded corners for consistency */
+    background-color: transparent; /* Keep original background */
+}
+
 .selection-group {
-    width: 100%; /* Ensure consistent alignment */
-    text-align: left; /* Align text to the left */
+    margin-bottom: 20px; /* Add spacing between groups */
 }
 
 .selection-group h3 {
     margin-bottom: 10px;
-    text-align: left; /* Align heading to the left */
+    font-size: 18px;
+    text-align: left;
 }
 
 .level-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 5px; /* Space between buttons */
     justify-content: flex-start; /* Align buttons to the left */
+}
+
+/* Deck Count Styling */
+.deck-count p {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+    margin-top: 10px; /* Add spacing from the previous element */
 }
 
 button {

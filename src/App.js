@@ -94,38 +94,48 @@ function App() {
         <div className="app">
             <h1 className="title">Simultaneous Equation Cannons</h1>
 
+            <h2 className="section-title">Board State</h2>
             <div className="selection-section">
-                <div className="selection-group">
-                    <h3>Select Fusion Levels:</h3>
-                    <div className="level-buttons">
-                        {levels.map((level) => (
-                            <button
-                                key={`fusion-${level}`}
-                                className={selectedFusionLevels.includes(level) ? "selected" : ""}
-                                onClick={() => handleFusionLevelToggle(level)}
-                            >
-                                {level}
-                            </button>
-                        ))}
+                <div className="selection-group-box">
+                    <div className="selection-group">
+                        <h3>Select Fusion Levels:</h3>
+                        <div className="level-buttons">
+                            {levels.map((level) => (
+                                <button
+                                    key={`fusion-${level}`}
+                                    className={selectedFusionLevels.includes(level) ? "selected" : ""}
+                                    onClick={() => handleFusionLevelToggle(level)}
+                                >
+                                    {level}
+                                </button>
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                <div className="selection-group">
-                    <h3>Select Xyz Ranks:</h3>
-                    <div className="level-buttons">
-                        {levels.map((rank) => (
-                            <button
-                                key={`xyz-${rank}`}
-                                className={selectedXyzRanks.includes(rank) ? "selected" : ""}
-                                onClick={() => handleXyzRankToggle(rank)}
-                            >
-                                {rank}
-                            </button>
-                        ))}
+                    <div className="selection-group">
+                        <h3>Select Xyz Ranks:</h3>
+                        <div className="level-buttons">
+                            {levels.map((rank) => (
+                                <button
+                                    key={`xyz-${rank}`}
+                                    className={selectedXyzRanks.includes(rank) ? "selected" : ""}
+                                    onClick={() => handleXyzRankToggle(rank)}
+                                >
+                                    {rank}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="deck-count">
+                        <p>
+                            <strong>Total Cards in Extra Deck:</strong> {calculateExtraDeckCount()} / 15
+                        </p>
                     </div>
                 </div>
             </div>
 
+            <h2 className="section-title">Extra Deck</h2>
             <div className="input-section">
                 <div className="input-group">
                     <label>Total Cards:</label>
@@ -182,16 +192,7 @@ function App() {
                     <p className="no-result">No valid solution found with the selected parameters.</p>
                 )}
             </div>
-
-            <div className="error-message">{errorMessage && <p>{errorMessage}</p>}</div>
-
-            <div className="deck-count">
-                <p>
-                    Total Cards in Extra Deck: <strong>{calculateExtraDeckCount()}</strong> /{" "}
-                    {MAX_EXTRA_DECK_SIZE}
-                </p>
-            </div>
-        </div >
+        </div>
     );
 }
 
