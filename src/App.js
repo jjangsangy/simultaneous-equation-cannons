@@ -105,14 +105,13 @@ function App() {
                         }}
                     />
                 </div>
-
                 <div className="input-group">
                     <label>Opponent Monster Rank/Level:</label>
                     <input
                         type="number"
                         value={opponentMonsterRankOrLevel}
                         onChange={(e) => {
-                            const value = Math.max(0, Number(e.target.value)); // Prevent negative numbers
+                            const value = Math.min(12, Math.max(0, Number(e.target.value))); // Clamp value between 0 and 12
                             setOpponentMonsterRankOrLevel(value);
                         }}
                     />

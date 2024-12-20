@@ -9,66 +9,69 @@ body {
 
 .app {
     padding: 20px;
-    text-align: center;
+    text-align: left; /* Align everything to the left by default */
 }
 
 /* Title Styling */
 .title {
     margin-bottom: 20px;
+    text-align: left; /* Align title to the left */
 }
+
 /* Input Section Styling */
 .input-section {
     margin-bottom: 20px;
-    display: flex; /* Use Flexbox for horizontal alignment */
-    gap: 20px; /* Add spacing between the input groups */
-    justify-content: center; /* Center inputs horizontally */
-    align-items: center; /* Align inputs vertically */
+    display: flex; /* Flexbox for horizontal alignment */
+    gap: 20px; /* Add spacing between input groups */
+    justify-content: space-between; /* Spread inputs across available space */
+    align-items: center; /* Vertically center-align the inputs */
 }
 
 .input-group {
+    flex: 1; /* Make input groups fill available space equally */
     display: flex;
     flex-direction: column; /* Keep label and input stacked */
-    align-items: center; /* Center-align label and input */
+    align-items: flex-start; /* Align label and input to the left */
 }
 
 .input-group label {
     margin-bottom: 5px;
     font-size: 16px;
-    text-align: center;
 }
 
 input {
-    padding: 5px;
+    padding: 10px;
     font-size: 16px;
     border-radius: 4px;
     border: none;
-    width: 150px; /* Ensure consistent input width */
-    text-align: center;
+    width: 100%; /* Make input fill available space */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 /* Selection Section Styling */
 .selection-section {
     display: flex;
     flex-direction: column; /* Stack sections vertically */
-    align-items: center; /* Center align content */
+    align-items: flex-start; /* Align content to the left */
     gap: 20px; /* Space between sections */
     margin-bottom: 20px;
 }
 
 .selection-group {
-    width: 100%; /* Consistent alignment */
-    text-align: center;
+    width: 100%; /* Ensure consistent alignment */
+    text-align: left; /* Align text to the left */
 }
 
 .selection-group h3 {
     margin-bottom: 10px;
+    text-align: left; /* Align heading to the left */
 }
 
 .level-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    justify-content: center;
+    justify-content: flex-start; /* Align buttons to the left */
 }
 
 button {
@@ -93,25 +96,26 @@ button.selected {
     background-color: #61dafb;
     color: black;
 }
+
 /* Result Section Styling */
 .result-section {
     margin-top: 20px;
-    min-height: 150px; /* Reserve space for results */
+    min-height: 180px; /* Reserve space for results */
     position: relative; /* Ensures static position in layout */
     border: 2px solid #50555e; /* Optional: visually distinguish results area */
     padding: 10px;
     border-radius: 10px;
     background-color: #3b3f46;
     display: flex;
-    align-items: center; /* Vertically centers content */
-    justify-content: center; /* Horizontally centers content */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
     color: #ffffff;
     font-size: 16px;
-    text-align: center; /* Centers all text */
+    text-align: center; /* Center-align text within the results */
 }
 
 .result-section .result {
-    text-align: center; /* Ensures result text is also centered */
+    text-align: center; /* Ensure the result text is centered */
 }
 
 .result-section .no-result,
@@ -129,10 +133,12 @@ button.selected {
     color: #ff6f61;
     font-weight: bold;
     margin-top: 20px;
+    text-align: left; /* Align error message to the left */
 }
 
 /* Extra Deck Count Styling */
 .deck-count p {
     margin-top: 10px;
     font-size: 16px;
+    text-align: left; /* Align deck count to the left */
 }
