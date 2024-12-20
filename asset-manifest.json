@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/simultaneous-equation-cannons/static/css/main.310d4c28.css",
-    "main.js": "/simultaneous-equation-cannons/static/js/main.b83978de.js",
+    "main.css": "/simultaneous-equation-cannons/static/css/main.7818c877.css",
+    "main.js": "/simultaneous-equation-cannons/static/js/main.d67422fd.js",
     "index.html": "/simultaneous-equation-cannons/index.html",
-    "main.310d4c28.css.map": "/simultaneous-equation-cannons/static/css/main.310d4c28.css.map",
-    "main.b83978de.js.map": "/simultaneous-equation-cannons/static/js/main.b83978de.js.map"
+    "main.7818c877.css.map": "/simultaneous-equation-cannons/static/css/main.7818c877.css.map",
+    "main.d67422fd.js.map": "/simultaneous-equation-cannons/static/js/main.d67422fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.310d4c28.css",
-    "static/js/main.b83978de.js"
+    "static/css/main.7818c877.css",
+    "static/js/main.d67422fd.js"
   ]
 }
