@@ -94,7 +94,7 @@ function App() {
         <div className="app">
             <h1 className="title">Simultaneous Equation Cannons</h1>
 
-            <h2 className="section-title">Board State</h2>
+            <h2 className="section-title">Extra Deck</h2>
             <div className="selection-section">
                 <div className="selection-group-box">
                     <div className="selection-group">
@@ -135,7 +135,7 @@ function App() {
                 </div>
             </div>
 
-            <h2 className="section-title">Extra Deck</h2>
+            <h2 className="section-title">Board State</h2>
             <div className="input-section">
                 <div className="input-group">
                     <label>Total Cards:</label>
@@ -193,6 +193,7 @@ function App() {
                 )}
             </div>
         </div>
+
     );
 }
 
