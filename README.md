@@ -22,11 +22,11 @@ This React application calculates the valid combinations for the Yu-Gi-Oh! card 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/jjangsangy/simultaneous-equation-cannon.git
+    git clone https://github.com/jjangsangy/simultaneous-equation-cannons.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd simultaneous-equation-cannon
+    cd simultaneous-equation-cannons
     ```
 3. Install dependencies:
     ```bash
