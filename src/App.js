@@ -220,7 +220,7 @@ function App() {
                         </button>
                     </div>
                     <div className="input-group">
-                        <label>Toggle Possible Cards:</label>
+                        <label>Toggle Cards:</label>
                         <button onClick={() => setIsToggleOn((prev) => !prev)} className="toggle-possible-cards">
                             {isToggleOn ? "Deactivate" : "Activate"}
                         </button>
