@@ -161,7 +161,7 @@ button.toggle-possible-cards {
 /* Result Section Styling */
 .result-section {
     margin-top: 20px;
-    min-height: 200px; /* Reserve space for results */
+    min-height: 250px; /* Reserve space for results */
     position: relative; /* Ensures static position in layout */
     border: 2px solid #50555e; /* Optional: visually distinguish results area */
     padding: 10px;
