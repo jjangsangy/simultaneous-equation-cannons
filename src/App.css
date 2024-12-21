@@ -152,10 +152,16 @@ button.selected {
     color: black;
 }
 
+button.toggle-possible-cards {
+    width: 200px; /* Increase the width of the Toggle Possible Cards button */
+    background-color: #61dafb; /* Change background color to fit the color scheme */
+    color: black; /* Change text color to black for better contrast */
+}
+
 /* Result Section Styling */
 .result-section {
     margin-top: 20px;
-    min-height: 180px; /* Reserve space for results */
+    min-height: 200px; /* Reserve space for results */
     position: relative; /* Ensures static position in layout */
     border: 2px solid #50555e; /* Optional: visually distinguish results area */
     padding: 10px;

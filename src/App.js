@@ -16,12 +16,16 @@ function App() {
     });
     const [calculationResult, setCalculationResult] = useState(null);
     const [errorMessage, setErrorMessage] = useState("");
+    const [isToggleOn, setIsToggleOn] = useState(() => {
+        return JSON.parse(localStorage.getItem("isToggleOn")) || false;
+    });
 
     const levels = Array.from({ length: 12 }, (_, i) => i + 1);
     const MAX_EXTRA_DECK_SIZE = 15;
 
     const calculateExtraDeckCount = () =>
         selectedFusionLevels.length + selectedXyzRanks.length * 2;
+
 
     const solveCardRequirements = (totalCards, opponentMonsterRankOrLevel) => {
         const R = totalCards - opponentMonsterRankOrLevel;
@@ -75,6 +79,21 @@ function App() {
         }
     };
 
+    const generatePossibleCards = (opponentMonsterRankOrLevel) => {
+        const possibleCards = [];
+        for (let total = 1; total <= 30; total++) {
+            const result = solveCardRequirements(total, opponentMonsterRankOrLevel);
+            if (
+                result &&
+                selectedFusionLevels.includes(result.fusionLevel) &&
+                selectedXyzRanks.includes(result.xyzRank1)
+            ) {
+                possibleCards.push({ total, ...result });
+            }
+        }
+        return possibleCards;
+    };
+
     useEffect(() => {
         const result = solveCardRequirements(totalCards, opponentMonsterRankOrLevel);
 
@@ -97,7 +116,8 @@ function App() {
         localStorage.setItem("opponentMonsterRankOrLevel", opponentMonsterRankOrLevel);
         localStorage.setItem("selectedFusionLevels", JSON.stringify(selectedFusionLevels));
         localStorage.setItem("selectedXyzRanks", JSON.stringify(selectedXyzRanks));
-    }, [totalCards, opponentMonsterRankOrLevel, selectedFusionLevels, selectedXyzRanks]);
+        localStorage.setItem("isToggleOn", isToggleOn);
+    }, [totalCards, opponentMonsterRankOrLevel, selectedFusionLevels, selectedXyzRanks, isToggleOn]);
 
     return (
         <div className="app">
@@ -170,13 +190,13 @@ function App() {
                             const value = Math.max(0, Number(e.target.value));
                             setTotalCards(value);
                         }}
+                        disabled={isToggleOn}
                     />
                     <div className="button-group">
-                        <button onClick={() => setTotalCards((prev) => Math.max(0, prev - 1))}>-</button>
-                        <button onClick={() => setTotalCards((prev) => prev + 1)}>+</button>
+                        <button onClick={() => setTotalCards((prev) => Math.max(0, prev - 1))} disabled={isToggleOn}>-</button>
+                        <button onClick={() => setTotalCards((prev) => prev + 1)} disabled={isToggleOn}>+</button>
                     </div>
                 </div>
-
                 <div className="input-group">
                     <label>Opponent Monster Rank/Level:</label>
                     <input
@@ -199,11 +219,41 @@ function App() {
                             +
                         </button>
                     </div>
+                    <div className="input-group">
+                        <label>Toggle Possible Cards:</label>
+                        <button onClick={() => setIsToggleOn((prev) => !prev)} className="toggle-possible-cards">
+                            {isToggleOn ? "Deactivate" : "Activate"}
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div className="result-section">
-                {calculationResult ? (
+                {isToggleOn ? (
+                    <div className="result">
+                        <h3>Possible Cards:</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Total Cards</th>
+                                    <th>Fusion Level</th>
+                                    <th>Xyz Rank 1</th>
+                                    <th>Xyz Rank 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {generatePossibleCards(opponentMonsterRankOrLevel).map((card, index) => (
+                                    <tr key={index}>
+                                        <td>{card.total}</td>
+                                        <td>{card.fusionLevel}</td>
+                                        <td>{card.xyzRank1}</td>
+                                        <td>{card.xyzRank2}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                ) : calculationResult ? (
                     <div className="result">
                         <h3>Calculation Result:</h3>
                         <p><strong>Fusion Level:</strong> {calculationResult.fusionLevel}</p>
