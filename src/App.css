@@ -189,6 +189,28 @@ button.toggle-possible-cards {
     color: #ffc107;
 }
 
+.result-section table {
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders are shared between cells */
+    margin-top: 10px; /* Add some space above the table */
+}
+
+.result-section th,
+.result-section td {
+    border: 1px solid #50555e; /* Add border to cells */
+    padding: 8px; /* Add padding inside cells */
+    text-align: center; /* Center-align text in cells */
+}
+
+.result-section th {
+    background-color: #3b3f46; /* Different background for header */
+    color: #ffffff; /* White text color for header */
+}
+
+.result-section td {
+    background-color: #282c34; /* Different background for cells */
+    color: #ffffff; /* White text color for cells */
+}
 
 /* Extra Deck Count Styling */
 .deck-count p {
