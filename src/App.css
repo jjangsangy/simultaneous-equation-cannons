@@ -153,7 +153,7 @@ button.selected {
 }
 
 button.toggle-possible-cards {
-    width: 200px; /* Increase the width of the Toggle Possible Cards button */
+    width: 130px; /* Increase the width of the Toggle Possible Cards button */
     background-color: #61dafb; /* Change background color to fit the color scheme */
     color: black; /* Change text color to black for better contrast */
 }
