@@ -235,10 +235,10 @@ function App() {
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Total Cards</th>
-                                    <th>Fusion Level</th>
-                                    <th>Xyz Rank 1</th>
-                                    <th>Xyz Rank 2</th>
+                                    <th>Total</th>
+                                    <th>Fusion</th>
+                                    <th>Xyz 1</th>
+                                    <th>Xyz 2</th>
                                 </tr>
                             </thead>
                             <tbody>
