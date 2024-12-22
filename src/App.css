@@ -90,7 +90,6 @@ input {
 
 .button-group button:hover {
     background-color: #61dafb;
-    color: black;
 }
 /* Selection Section Styling */
 .selection-section {
@@ -153,9 +152,19 @@ button.selected {
 }
 
 button.toggle-possible-cards {
-    width: 130px; /* Increase the width of the Toggle Possible Cards button */
-    background-color: #61dafb; /* Change background color to fit the color scheme */
-    color: black; /* Change text color to black for better contrast */
+    background-color: #61dafb;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button.toggle-possible-cards:hover {
+    background-color: #16ccff;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+button.toggle-possible-cards:active {
+    background-color: #16ccff;
 }
 
 /* Result Section Styling */

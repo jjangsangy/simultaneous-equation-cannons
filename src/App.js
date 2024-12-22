@@ -196,6 +196,11 @@ function App() {
                         <button onClick={() => setTotalCards((prev) => Math.max(0, prev - 1))} disabled={isToggleOn}>-</button>
                         <button onClick={() => setTotalCards((prev) => prev + 1)} disabled={isToggleOn}>+</button>
                     </div>
+                    <div className="button-group">
+                        <button onClick={() => setIsToggleOn((prev) => !prev)} className="toggle-possible-cards">
+                            {isToggleOn ? "On" : "Off"}
+                        </button>
+                    </div>
                 </div>
                 <div className="input-group">
                     <label>Opponent Monster Rank/Level:</label>
@@ -219,12 +224,7 @@ function App() {
                             +
                         </button>
                     </div>
-                    <div className="input-group">
-                        <label>Toggle Cards:</label>
-                        <button onClick={() => setIsToggleOn((prev) => !prev)} className="toggle-possible-cards">
-                            {isToggleOn ? "Deactivate" : "Activate"}
-                        </button>
-                    </div>
+
                 </div>
             </div>
 
