@@ -121,7 +121,7 @@ function App() {
 
     return (
         <div className="app">
-            <h1 className="title">Simultaneous Equation Cannons</h1>
+            <h1 className="title">Simultaneous Equation Cannons Calculator</h1>
 
             <h2 className="section-title">Extra Deck</h2>
             <div className="selection-section">
@@ -255,7 +255,7 @@ function App() {
                     </div>
                 ) : calculationResult ? (
                     <div className="result">
-                        <h3>Calculation Result:</h3>
+                        <h3>Combination:</h3>
                         <p><strong>Fusion Level:</strong> {calculationResult.fusionLevel}</p>
                         <p><strong>Xyz Rank 1:</strong> {calculationResult.xyzRank1}</p>
                         <p><strong>Xyz Rank 2:</strong> {calculationResult.xyzRank2}</p>
