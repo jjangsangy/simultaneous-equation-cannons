@@ -236,8 +236,8 @@ function App() {
                             <thead>
                                 <tr>
                                     <th>Total Cards</th>
-                                    <th>Xyz Rank</th>
-                                    <th>Xyz Rank</th>
+                                    <th>Xyz Rank 1</th>
+                                    <th>Xyz Rank 2</th>
                                     <th>Fusion Level</th>
                                 </tr>
                             </thead>
