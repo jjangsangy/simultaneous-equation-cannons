@@ -236,18 +236,18 @@ function App() {
                             <thead>
                                 <tr>
                                     <th>Total Cards</th>
+                                    <th>Xyz Rank</th>
+                                    <th>Xyz Rank</th>
                                     <th>Fusion Level</th>
-                                    <th>Xyz Rank</th>
-                                    <th>Xyz Rank</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {generatePossibleCards(opponentMonsterRankOrLevel).map((card, index) => (
                                     <tr key={index}>
                                         <td>{card.total}</td>
-                                        <td>{card.fusionLevel}</td>
                                         <td>{card.xyzRank1}</td>
                                         <td>{card.xyzRank2}</td>
+                                        <td>{card.fusionLevel}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -256,9 +256,9 @@ function App() {
                 ) : calculationResult ? (
                     <div className="result">
                         <h3>Combination:</h3>
-                        <p><strong>Fusion Level:</strong> {calculationResult.fusionLevel}</p>
                         <p><strong>Xyz Rank 1:</strong> {calculationResult.xyzRank1}</p>
                         <p><strong>Xyz Rank 2:</strong> {calculationResult.xyzRank2}</p>
+                        <p><strong>Fusion Level:</strong> {calculationResult.fusionLevel}</p>
                     </div>
                 ) : selectedFusionLevels.length === 0 || selectedXyzRanks.length === 0 ? (
                     <p className="no-selection">Please select at least one Fusion Level and one XYZ Rank.</p>
