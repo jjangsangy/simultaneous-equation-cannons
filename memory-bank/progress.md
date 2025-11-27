@@ -6,6 +6,7 @@
 - **Integration**: Complete.
 
 ## Recent Milestones
+- [x] Comprehensive README update (Features, Technologies, Usage)
 - [x] Refactor Help/Tutorial to Collapsible Dropdown
 - [x] Implement Help/Tutorial Mode ("How to Use" guide)
 - [x] Implement new favicon (SVG)

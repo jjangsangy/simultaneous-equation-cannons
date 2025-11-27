@@ -1,9 +1,13 @@
 # Active Context
 
 ## Current Work Focus
-Adding Help/Tutorial features to clarify app usage in relation to Yugioh game mechanics.
+Updating documentation to reflect recent feature additions.
 
 ## Recent Changes
+- **Documentation Update**:
+  - Comprehensive update to `README.md`.
+  - Added details on Card Info, Persistence, "Show Possible Combinations", and In-App Tutorial.
+  - Added "Technologies Used" and refined "How to Use" sections.
 - **Tutorial Mode**:
   - **Refinement**: Moved the "How to Use" guide from a header modal to a **collapsible dropdown** in the main body for better transparency and accessibility.
   - Added a new section explaining the **"Show Possible Combinations"** toggle option.

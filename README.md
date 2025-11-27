@@ -4,21 +4,32 @@
 
 This React application calculates the valid combinations for the Yu-Gi-Oh! card effect **Simultaneous Equation Cannons**. Users can input total cards, opponent monster rank/level, and select Fusion Levels and Xyz Ranks to determine valid combinations for resolving the card's effect.
 
-# Features
+## Features
 
-- **Input Validation**:
-  - Total cards and opponent monster rank/level cannot be negative.
-  - Opponent monster rank/level is capped at a maximum of 12.
-- **Extra Deck Constraints**:
-  - Fusion and Xyz card selection is limited to a maximum of 15 total cards.
-  - Each Xyz card counts as 2 cards toward the total.
-- **Dynamic Calculation**:
-  - Displays valid Fusion Levels and Xyz Ranks based on user inputs.
-  - Updates results dynamically without moving other UI elements.
+- **Smart Calculation**: Instantly finds valid Fusion Level and Xyz Rank combinations based on board state.
+- **Extra Deck Management**:
+  - Validates selections against the 15-card Extra Deck limit.
+  - Correctly weights Xyz Monsters (2 cards) and Fusion Monsters (1 card).
+- **Comprehensive Analysis**:
+  - **"Show Possible Combinations" Mode**: Displays a table of ALL valid solutions for a given Opponent Rank, helping you plan your field setup.
+- **User Convenience**:
+  - **Persistence**: Remembers your Extra Deck selections and inputs between sessions using LocalStorage.
+  - **Card Info**: Built-in reference for the official card text and image.
+  - **In-App Tutorial**: Accessible "How to Use" guide within the application.
+- **Modern UI**:
+  - Built with **React** and **Tailwind CSS**.
+  - Fully responsive design with dark mode aesthetic.
+  - Input validation for ranks/levels (0-12) and card counts.
 
-# Getting Started
+## Technologies Used
 
-## Installation
+- **React**: UI Library
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Icon set
+
+## Getting Started
+
+### Installation
 
 1. Clone the repository:
     ```bash
@@ -33,14 +44,14 @@ This React application calculates the valid combinations for the Yu-Gi-Oh! card 
     npm install
     ```
 
-## Usage
+### Usage
 1. Start the development server:
     ```bash
     npm start
     ```
 2. Open the app in your browser at `http://localhost:3000`
 
-## Deployment
+### Deployment
 
 To build the app for production:
 
@@ -48,11 +59,13 @@ To build the app for production:
 npm run build
 ```
 
-The production-ready files will be in the build/ directory.
+The production-ready files will be in the `build/` directory.
 
-##  How to Use
+## How to Use
 
-1. Input the total number of cards on the field and in both players' hands.
-2. Input the opponent's monster rank or level (0-12).
-3. Select desired Fusion Levels and Xyz Ranks, adhering to the extra deck constraints.
-4. View the calculated valid combinations in the results section.
+1. **Extra Deck Setup**: Select the Fusion Levels and Xyz Ranks available in your Extra Deck.
+2. **Board State**: Input the total number of cards on the field and in both players' hands.
+3. **Opponent Monster**: Input the Rank or Level of the opponent's face-up monster.
+4. **View Results**:
+   - The app will display the specific Fusion and Xyz monsters to banish if a solution exists.
+   - Toggle **"Show Possible Combinations"** to see a list of all valid board states for the current opponent monster.
