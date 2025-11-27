@@ -6,6 +6,8 @@
 - **Integration**: Complete.
 
 ## Recent Milestones
+- [x] Add "Trap Card" indicator to Card Info
+- [x] Migrate card image to local repository
 - [x] Comprehensive README update (Features, Technologies, Usage)
 - [x] Refactor Help/Tutorial to Collapsible Dropdown
 - [x] Implement Help/Tutorial Mode ("How to Use" guide)

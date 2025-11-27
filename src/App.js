@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import cardImage from "./assets/SimultaneousEquationCannons.png";
 
 // Lucide React Icons
 const Trash2 = ({ className }) => (
@@ -307,13 +308,14 @@ const App = () => {
                                 <div className="flex flex-col gap-4">
                                     <div className="relative aspect-[0.69] w-48 mx-auto rounded-lg overflow-hidden shadow-lg border border-slate-700">
                                         <img
-                                            src="https://ms.yugipedia.com//thumb/3/3d/SimultaneousEquationCannons-MP25-EN-PScR-1E.png/300px-SimultaneousEquationCannons-MP25-EN-PScR-1E.png"
+                                            src={cardImage}
                                             alt="Simultaneous Equation Cannons"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
                                     <div className="space-y-2">
                                         <h3 className="font-bold text-lg text-white">Simultaneous Equation Cannons</h3>
+                                        <div className="text-xs font-bold text-pink-500 uppercase tracking-wider">[Trap Card]</div>
                                         <p className="text-sm text-slate-300 leading-relaxed text-justify">
                                             Banish 1 Fusion Monster and 2 Xyz Monsters with the same Rank from your Extra Deck, whose combined Level and Ranks equal the total number of cards in both players' hands and on the field, then you can apply this effect.
                                             <br /><br />

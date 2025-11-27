@@ -21,10 +21,12 @@ Updating documentation to reflect recent feature additions.
   - Implemented a new SVG favicon (`public/favicon.svg`) featuring a "Calculator" icon style.
   - Matches the app's dark theme (Slate-900 background, Cyan-400 stroke).
   - Removed old PNG favicons to ensure consistency.
+- **Card Image Migration**:
+  - Migrated the card image from an external Yugipedia URL to a local asset (`src/assets/SimultaneousEquationCannons.png`).
+  - Ensures the image is served reliably from the repository without depending on external servers.
 - **Card Preview Feature**:
   - Added a "Card Info" button (question mark icon) to the header.
-  - Implemented a dropdown/modal that displays the card image and full effect text.
-  - Used Yugipedia for the card image source.
+  - Implemented a dropdown/modal that displays the card image, card type (Trap Card), and full effect text.
   - Styled with Tailwind CSS (absolute positioning, backdrop blur, animations).
 - **Tailwind CSS Integration** (Previous):
   - Installed `tailwindcss`, `postcss`, `autoprefixer`.
@@ -44,6 +46,6 @@ Updating documentation to reflect recent feature additions.
 - **Tutorial UI**: Moved from a modal to an accordion-style dropdown in the main body. This avoids context switching (opening/closing a modal) and allows the user to keep the guide open while using the calculator if they wish.
 - **Tutorial Content**: Focused on bridging the gap between the calculator's UI inputs and the specific text of the Yugioh card to ensure players understand *why* they are entering these numbers.
 - **Button Styling**: Prioritized accessibility (touch target size) and reliable interaction over visual flair (scaling effect) for the selection buttons.
-- **Card Image Source**: Using a direct URL to Yugipedia for the card image. Ideally, this should be a local asset or a more permanent CDN link to ensure reliability, but this works for now.
+- **Card Image Source**: Switched from a direct URL to a local asset stored in `src/assets/`. This ensures the image is always available, version controlled, and loads faster.
 - **Tailwind CSS Version**: Used v3 for stability.
 - **Persistence**: Using `localStorage` to save user state.
