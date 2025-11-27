@@ -233,9 +233,9 @@ const App = () => {
         <button
             onClick={() => onClick(value)}
             className={`
-        w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-md font-bold text-sm md:text-base transition-all duration-200
+        w-12 h-12 flex items-center justify-center rounded-md font-bold text-base transition-all duration-200
         ${isSelected
-                    ? `${colorClass} text-slate-900 shadow-[0_0_15px_rgba(56,189,248,0.5)] scale-105`
+                    ? `${colorClass} text-slate-900 shadow-[0_0_15px_rgba(56,189,248,0.5)]`
                     : "bg-slate-700 text-slate-300 hover:bg-slate-600 hover:text-white"
                 }
       `}
