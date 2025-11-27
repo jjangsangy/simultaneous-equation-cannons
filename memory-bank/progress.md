@@ -2,10 +2,12 @@
 
 ## Status
 - **Core Functionality**: Complete.
-- **UI/UX**: Complete (Tailwind CSS implementation).
+- **UI/UX**: Complete (Tailwind CSS implementation, Help/Tutorial elements).
 - **Integration**: Complete.
 
 ## Recent Milestones
+- [x] Refactor Help/Tutorial to Collapsible Dropdown
+- [x] Implement Help/Tutorial Mode ("How to Use" guide)
 - [x] Implement new favicon (SVG)
 - [x] Initial React App Setup (Previous)
 - [x] Vanilla CSS Implementation (Previous)
