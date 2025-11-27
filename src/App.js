@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import cardImage from "./assets/SimultaneousEquationCannons.png";
+import cardImage from "./assets/SimultaneousEquationCannons.webp";
 
 // Lucide React Icons
 const Trash2 = ({ className }) => (
