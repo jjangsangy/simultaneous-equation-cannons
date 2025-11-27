@@ -5,8 +5,9 @@
 - **Component Structure**:
   - `App`: The main container and logic handler.
     - Manages state for game variables and user inputs.
-    - Contains sub-components (defined locally for simplicity): `LevelButton`, `Trash2` (Icon), `Calculator` (Icon), `Info` (Icon).
+    - Contains sub-components (defined locally for simplicity): `LevelButton`, `Trash2`, `Calculator`, `Info`, `Github`, `HelpCircle`.
     - Handles persistence via `useEffect`.
+    - Includes a **Card Preview** modal/dropdown for displaying card details.
 
 ## State Management
 - **React `useState`**: Used for all local state.
@@ -17,6 +18,7 @@
   - `calculationResult` (object | null)
   - `errorMessage` (string)
   - `isToggleOn` (boolean)
+  - `showCardPreview` (boolean): Controls visibility of the card details modal.
 - **Persistence**: State is initialized from `localStorage` if available, and updated in `localStorage` whenever it changes.
 
 ## Styling

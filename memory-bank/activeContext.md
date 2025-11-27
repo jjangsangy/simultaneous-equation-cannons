@@ -1,27 +1,29 @@
 # Active Context
 
 ## Current Work Focus
-Successfully integrated a major UI and logic update. The app has been migrated from vanilla CSS to **Tailwind CSS**.
+Implemented a Card Preview feature to allow users to view the "Simultaneous Equation Cannons" card details and image directly within the app.
 
 ## Recent Changes
-- **Tailwind CSS Integration**:
+- **Card Preview Feature**:
+  - Added a "Card Info" button (question mark icon) to the header.
+  - Implemented a dropdown/modal that displays the card image and full effect text.
+  - Used Yugipedia for the card image source.
+  - Styled with Tailwind CSS (absolute positioning, backdrop blur, animations).
+- **Tailwind CSS Integration** (Previous):
   - Installed `tailwindcss`, `postcss`, `autoprefixer`.
   - Configured `tailwind.config.js` to scan `src` files.
   - Updated `src/index.css` with Tailwind directives.
-- **App Component Update**:
+- **App Component Update** (Previous):
   - Replaced `src/App.js` with a new implementation that uses Tailwind utility classes.
   - New UI design with a dark theme (slate/cyan color scheme).
-  - Improved UX for selecting Extra Deck cards and inputting numbers.
-  - Implemented logic for calculating valid moves based on the "Simultaneous Equation Cannons" card text.
-- **Cleanup**: Removed unused `src/App.css`.
 
 ## Next Steps
-- Verify the build and functionality in a browser environment (User has been informed to do so).
+- Verify the build and functionality in a browser environment.
 - Potential future enhancements:
   - Add more visual feedback for valid/invalid states.
-  - Add specific card images or themes.
   - Unit testing for the calculation logic.
 
 ## Active Decisions
-- **Tailwind CSS Version**: Used v3 for stability and compatibility with standard React setups, after initially encountering issues with v4 (alpha/beta).
-- **Persistence**: Using `localStorage` to save user state (Total Cards, Ranks, Extra Deck selections) so data isn't lost on refresh.
+- **Card Image Source**: Using a direct URL to Yugipedia for the card image. Ideally, this should be a local asset or a more permanent CDN link to ensure reliability, but this works for now.
+- **Tailwind CSS Version**: Used v3 for stability.
+- **Persistence**: Using `localStorage` to save user state.

@@ -13,5 +13,6 @@ This app automates the calculation. Users input the game state variables (Total 
 ## User Experience Goals
 - **Speed**: Instant calculation updates as inputs change.
 - **Clarity**: Clear visualization of the solution (Fusion Level and Xyz Ranks).
+- **Accessibility**: Quick access to the card's official text and image for reference via a "Card Info" feature.
 - **Usability**: Easy toggling of available Extra Deck cards.
 - **Persistence**: Remembers selected cards and inputs between sessions so players don't have to re-enter their Extra Deck contents every time.
