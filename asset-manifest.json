@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/simultaneous-equation-cannons/static/css/main.069def2d.css",
-    "main.js": "/simultaneous-equation-cannons/static/js/main.33200e9a.js",
-    "static/media/SimultaneousEquationCannons.png": "/simultaneous-equation-cannons/static/media/SimultaneousEquationCannons.140106f43ca68380551f.png",
+    "main.js": "/simultaneous-equation-cannons/static/js/main.caecf95c.js",
+    "static/media/SimultaneousEquationCannons.webp": "/simultaneous-equation-cannons/static/media/SimultaneousEquationCannons.eae443b884b037e89d51.webp",
     "index.html": "/simultaneous-equation-cannons/index.html",
     "main.069def2d.css.map": "/simultaneous-equation-cannons/static/css/main.069def2d.css.map",
-    "main.33200e9a.js.map": "/simultaneous-equation-cannons/static/js/main.33200e9a.js.map"
+    "main.caecf95c.js.map": "/simultaneous-equation-cannons/static/js/main.caecf95c.js.map"
   },
   "entrypoints": [
     "static/css/main.069def2d.css",
-    "static/js/main.33200e9a.js"
+    "static/js/main.caecf95c.js"
   ]
 }
