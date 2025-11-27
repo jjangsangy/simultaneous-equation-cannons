@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/simultaneous-equation-cannons/static/css/main.f211b13a.css",
-    "main.js": "/simultaneous-equation-cannons/static/js/main.b89fc366.js",
+    "main.css": "/simultaneous-equation-cannons/static/css/main.069def2d.css",
+    "main.js": "/simultaneous-equation-cannons/static/js/main.33200e9a.js",
+    "static/media/SimultaneousEquationCannons.png": "/simultaneous-equation-cannons/static/media/SimultaneousEquationCannons.140106f43ca68380551f.png",
     "index.html": "/simultaneous-equation-cannons/index.html",
-    "main.f211b13a.css.map": "/simultaneous-equation-cannons/static/css/main.f211b13a.css.map",
-    "main.b89fc366.js.map": "/simultaneous-equation-cannons/static/js/main.b89fc366.js.map"
+    "main.069def2d.css.map": "/simultaneous-equation-cannons/static/css/main.069def2d.css.map",
+    "main.33200e9a.js.map": "/simultaneous-equation-cannons/static/js/main.33200e9a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f211b13a.css",
-    "static/js/main.b89fc366.js"
+    "static/css/main.069def2d.css",
+    "static/js/main.33200e9a.js"
   ]
 }
