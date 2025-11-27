@@ -367,16 +367,16 @@ const App = () => {
                 <section className="space-y-4">
                     <h2 className="text-xl font-bold text-slate-200">Board State</h2>
                     <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                             {/* Total Cards Input */}
-                            <div className="space-y-3">
+                            <div className="space-y-2">
                                 <label className="text-sm font-medium text-slate-400 block">Total Cards (Field + Hand)</label>
                                 <div className="flex items-center gap-3">
                                     <button
                                         onClick={() => !isToggleOn && setTotalCards(Math.max(0, totalCards - 1))}
                                         disabled={isToggleOn}
-                                        className="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 active:bg-slate-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-xl font-bold"
+                                        className="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 active:bg-slate-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-lg font-bold"
                                     >
                                         -
                                     </button>
@@ -385,12 +385,12 @@ const App = () => {
                                         value={totalCards}
                                         onChange={(e) => setTotalCards(Math.max(0, Number(e.target.value)))}
                                         disabled={isToggleOn}
-                                        className="w-full bg-slate-900 border border-slate-600 rounded-lg py-2 px-4 text-center text-xl font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 disabled:opacity-50"
+                                        className="w-full bg-slate-900 border border-slate-600 rounded-lg py-1.5 px-3 text-center text-lg font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 disabled:opacity-50"
                                     />
                                     <button
                                         onClick={() => !isToggleOn && setTotalCards(totalCards + 1)}
                                         disabled={isToggleOn}
-                                        className="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 active:bg-slate-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-xl font-bold"
+                                        className="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 active:bg-slate-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-lg font-bold"
                                     >
                                         +
                                     </button>
@@ -398,12 +398,12 @@ const App = () => {
                             </div>
 
                             {/* Opponent Rank Input */}
-                            <div className="space-y-3">
+                            <div className="space-y-2">
                                 <label className="text-sm font-medium text-slate-400 block">Opponent Monster Rank/Level</label>
                                 <div className="flex items-center gap-3">
                                     <button
                                         onClick={() => setOpponentMonsterRankOrLevel(Math.max(0, opponentMonsterRankOrLevel - 1))}
-                                        className="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 active:bg-slate-500 transition-colors text-xl font-bold"
+                                        className="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 active:bg-slate-500 transition-colors text-lg font-bold"
                                     >
                                         -
                                     </button>
@@ -411,11 +411,11 @@ const App = () => {
                                         type="number"
                                         value={opponentMonsterRankOrLevel}
                                         onChange={(e) => setOpponentMonsterRankOrLevel(Math.min(12, Math.max(0, Number(e.target.value))))}
-                                        className="w-full bg-slate-900 border border-slate-600 rounded-lg py-2 px-4 text-center text-xl font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                                        className="w-full bg-slate-900 border border-slate-600 rounded-lg py-1.5 px-3 text-center text-lg font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500"
                                     />
                                     <button
                                         onClick={() => setOpponentMonsterRankOrLevel(Math.min(12, opponentMonsterRankOrLevel + 1))}
-                                        className="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 active:bg-slate-500 transition-colors text-xl font-bold"
+                                        className="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 active:bg-slate-500 transition-colors text-lg font-bold"
                                     >
                                         +
                                     </button>
@@ -425,7 +425,7 @@ const App = () => {
                         </div>
 
                         {/* Toggle Switch */}
-                        <div className="mt-8 pt-6 border-t border-slate-700 flex items-center justify-between">
+                        <div className="mt-4 pt-4 border-t border-slate-700 flex items-center justify-between">
                             <div className="flex items-center gap-2 text-slate-400 text-sm">
                                 <Info className="w-4 h-4" />
                                 <span>Show all possible card combinations</span>
