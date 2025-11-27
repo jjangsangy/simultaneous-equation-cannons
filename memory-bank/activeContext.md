@@ -1,9 +1,13 @@
 # Active Context
 
 ## Current Work Focus
-Implemented a Card Preview feature to allow users to view the "Simultaneous Equation Cannons" card details and image directly within the app.
+Refining the application's visual identity, specifically updating the favicon to match the theme.
 
 ## Recent Changes
+- **Favicon Update**:
+  - Implemented a new SVG favicon (`public/favicon.svg`) featuring a "Calculator" icon style.
+  - Matches the app's dark theme (Slate-900 background, Cyan-400 stroke).
+  - Removed old PNG favicons to ensure consistency.
 - **Card Preview Feature**:
   - Added a "Card Info" button (question mark icon) to the header.
   - Implemented a dropdown/modal that displays the card image and full effect text.
