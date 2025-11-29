@@ -3,14 +3,23 @@
 ## Architecture
 - **Single Page Application (SPA)**: Built with React.
 - **Component Structure**:
-  - `App`: The main container and logic handler.
-    - Manages state for game variables and user inputs.
-    - Contains sub-components (defined locally for simplicity): `LevelButton`, `Trash2`, `Calculator`, `Info`, `Github`, `HelpCircle`.
-    - Handles persistence via `useEffect`.
-    - Includes a **Card Preview** modal/dropdown for displaying card details.
+  - `App`: Composition root that assembles the UI and provides data via `useCalculator`.
+  - **Components (`src/components/`)**:
+    - `Header`: Title and Card Preview modal.
+    - `Tutorial`: Collapsible "How to Use" guide.
+    - `ExtraDeckSelector`: UI for selecting Fusion Levels and Xyz Ranks.
+    - `BoardStateInput`: Inputs for Total Cards and Opponent Rank.
+    - `ResultsDisplay`: Shows the calculation result or possible combinations table.
+    - `Footer`: Application footer.
+    - `LevelButton`: Reusable button component for levels/ranks.
+    - `icons.js`: Centralized export for SVG icons.
+  - **Hooks (`src/hooks/`)**:
+    - `useCalculator`: Manages application state, persistence, and business logic.
+  - **Utils (`src/utils/`)**:
+    - `solver.js`: Pure functions for mathematical logic.
 
 ## State Management
-- **React `useState`**: Used for all local state.
+- **React `useState`**: Used for all local state within `useCalculator`.
   - `totalCards` (number)
   - `opponentMonsterRankOrLevel` (number)
   - `selectedFusionLevels` (array of numbers)
@@ -18,8 +27,7 @@
   - `calculationResult` (object | null)
   - `errorMessage` (string)
   - `isToggleOn` (boolean)
-  - `showCardPreview` (boolean): Controls visibility of the card details modal.
-- **Persistence**: State is initialized from `localStorage` if available, and updated in `localStorage` whenever it changes.
+- **Persistence**: State is initialized from `localStorage` if available, and updated in `localStorage` whenever it changes, handled within `useCalculator`.
 
 ## Styling
 - **Tailwind CSS**: Utility-first CSS framework.
@@ -31,20 +39,16 @@
   - Let $T$ = Total Cards
   - Let $O$ = Opponent Rank
   - Let $F$ = Fusion Level
-  - Let $X$ = Xyz Rank (we assume two Xyz monsters of the same rank for simplicity or as per card strategy).
-  - Equations:
-    1. $F + 2X = \text{ExtraDeckCount}$ (Not exactly the equation from the card, but used for checking extra deck size)
-    - Actually, the card effect logic implemented is:
-      - $R = T - O$
-      - $L = 2O - T$
-      - If $R > 0$ and $L > 0$, then $XyzRank = R$ and $FusionLevel = L$.
-      - This derives from the simultaneous equations:
-        - $X + F = O$ ?? No, let's verify the math in `solveCardRequirements`.
-        - The code says: `R = tCards - oppRank`, `L = 2 * oppRank - tCards`.
-        - It returns `fusionLevel: L, xyzRank1: R, xyzRank2: R`.
-        - So it implies the solution requires banishing 1 Fusion (Level $L$) and 2 Xyz (Rank $R$).
+  - Let $X$ = Xyz Rank (we assume two Xyz monsters of the same rank).
+  - Derived solution:
+      - $X = T - O$
+      - $F = 2O - T$
+  - If $X > 0$ and $F > 0$, then the solution requires banishing 1 Fusion (Level $F$) and 2 Xyz (Rank $X$).
+  - Logic is encapsulated in `src/utils/solver.js`.
 
 ## Code Organization
-- `src/App.js`: Contains all logic and UI.
+- `src/App.js`: Main entry point for layout.
+- `src/components/`: UI components.
+- `src/hooks/`: Custom React hooks.
+- `src/utils/`: Utility functions.
 - `src/index.css`: Tailwind directives.
-- `tailwind.config.js`: Tailwind configuration.

@@ -4,8 +4,10 @@
 - **Core Functionality**: Complete.
 - **UI/UX**: Complete (Tailwind CSS implementation, Help/Tutorial elements).
 - **Integration**: Complete.
+- **Refactoring**: Complete (Modular architecture implemented).
 
 ## Recent Milestones
+- [x] Refactor codebase to be modular (Components, Hooks, Utils)
 - [x] Add "Trap Card" indicator to Card Info
 - [x] Migrate card image to local repository
 - [x] Comprehensive README update (Features, Technologies, Usage)
