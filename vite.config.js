@@ -20,4 +20,9 @@ export default defineConfig({
     build: {
         outDir: 'build', // Maintain 'build' output directory for consistency with previous deploy scripts or change to dist
     },
+    test: {
+        globals: true,
+        environment: 'jsdom',
+        setupFiles: './vitest.setup.js',
+    },
 });
