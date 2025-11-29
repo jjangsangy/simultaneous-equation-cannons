@@ -22,7 +22,11 @@ jobs:
 
     # Install dependencies
     - name: Install dependencies
-      run: npm install
+      run: npm ci
+
+    # Run tests
+    - name: Run tests
+      run: npm run test:run
 
     # Build the app
     - name: Build the app
