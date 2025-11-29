@@ -6,6 +6,7 @@
   "homepage": "https://jjangsangy.github.io/simultaneous-equation-cannons",
   "dependencies": {
     "react": "^18.2.0",
+    "react-compiler-runtime": "^1.0.0",
     "react-dom": "^18.2.0"
   },
   "scripts": {
@@ -30,6 +31,8 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.22",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint-plugin-react-compiler": "^19.1.0-rc.2",
     "gh-pages": "^6.2.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18",

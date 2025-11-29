@@ -2,7 +2,8 @@
 
 ## Core Technologies
 - **React**: Frontend framework (v18.2.0).
-- **Create React App**: Build tool and configuration (react-scripts v5.0.1).
+- **Vite**: Build tool and development server (v7.x).
+- **React Compiler**: Automatic memoization compiler (Babel plugin).
 - **Tailwind CSS**: Styling framework (v3.x).
   - **PostCSS**: CSS transformation tool.
   - **Autoprefixer**: Vendor prefix management.
@@ -24,6 +25,8 @@
 
 ## Dependencies
 - `react`, `react-dom`
-- `react-scripts`
+- `react-compiler-runtime` (Runtime support for React Compiler)
+- `vite`, `@vitejs/plugin-react` (DevDependencies)
+- `babel-plugin-react-compiler`, `eslint-plugin-react-compiler` (DevDependencies)
 - `tailwindcss`, `postcss`, `autoprefixer` (DevDependencies)
 - `gh-pages` (DevDependency for deployment)
