@@ -5,8 +5,12 @@
 - **UI/UX**: Complete (Tailwind CSS implementation, Help/Tutorial elements).
 - **Integration**: Complete.
 - **Refactoring**: Complete (Modular architecture implemented).
+- **Testing & CI/CD**: Complete (Tests suite, CI pipeline, Pre-commit hooks).
 
 ## Recent Milestones
+- [x] Implement robust testing infrastructure (Vitest, React Testing Library)
+- [x] Integrate testing into CI/CD pipeline (GitHub Actions)
+- [x] Set up pre-commit hooks (Husky, Lint-staged)
 - [x] Refactor codebase to be modular (Components, Hooks, Utils)
 - [x] Add "Trap Card" indicator to Card Info
 - [x] Migrate card image to local repository

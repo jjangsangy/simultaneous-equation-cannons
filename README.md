@@ -1,5 +1,11 @@
 # Yu-Gi-Oh! Simultaneous Equation Cannons Calculator
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![GitHub Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)](https://jjangsangy.github.io/simultaneous-equation-cannons)
+
 ![card](./assets/ui.png)
 
 This React application calculates the valid combinations for the Yu-Gi-Oh! card effect **Simultaneous Equation Cannons**. Users can input total cards, opponent monster rank/level, and select Fusion Levels and Xyz Ranks to determine valid combinations for resolving the card's effect.

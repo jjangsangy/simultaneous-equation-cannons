@@ -29,6 +29,14 @@
   - `isToggleOn` (boolean)
 - **Persistence**: State is initialized from `localStorage` if available, and updated in `localStorage` whenever it changes, handled within `useCalculator`.
 
+## Testing Strategy
+- **Unit Tests** (`src/utils/solver.test.js`): Verify core mathematical logic and edge cases in `solver.js`.
+- **Integration Tests** (`src/hooks/useCalculator.test.js`): Verify state management, business logic, and interactions in `useCalculator.js`.
+- **Component Tests** (`src/components/*.test.jsx`): Verify rendering, user interactions, and prop handling for individual UI components.
+- **App Smoke Test** (`src/App.test.jsx`): Ensure the main application renders without crashing and key elements are present.
+- **CI/CD Integration**: Tests run automatically on push/PR via GitHub Actions. Deployment to GitHub Pages is blocked if tests fail.
+- **Pre-commit Hooks**: Tests run on staged files to prevent committing broken code.
+
 ## Styling
 - **Tailwind CSS**: Utility-first CSS framework.
 - **Theme**: Dark mode style (Slate grays, Cyan/Teal accents).
