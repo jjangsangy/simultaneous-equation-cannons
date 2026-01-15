@@ -75,3 +75,9 @@ The production-ready files will be in the `build/` directory.
 4. **View Results**:
    - The app will display the specific Fusion and Xyz monsters to banish if a solution exists.
    - Toggle **"Show Possible Combinations"** to see a list of all valid board states for the current opponent monster.
+
+---
+
+<a href="https://www.buymeacoffee.com/sanghan">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="200" height="50" alt="Buy Me A Coffee">
+</a>
